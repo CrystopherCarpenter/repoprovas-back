@@ -20,6 +20,7 @@ async function getDataByTerm() {
         },
     });
 }
+
 async function getDataByTeacher() {
     return prisma.teachers.findMany({
         include: {
@@ -37,7 +38,17 @@ async function getDataByTeacher() {
     });
 }
 
+async function getTeachers() {
+    return prisma.teachers.findMany({});
+}
+
+async function getDisciplines() {
+    return prisma.disciplines.findMany({});
+}
+
 export default {
     getDataByTerm,
     getDataByTeacher,
+    getTeachers,
+    getDisciplines,
 };
