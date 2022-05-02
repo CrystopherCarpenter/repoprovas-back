@@ -5,11 +5,12 @@ async function getData() {
     const dataByTeacher = await repoRepository.getDataByTeacher();
     const teachersData = await repoRepository.getTeachers();
     const disciplinesData = await repoRepository.getDisciplines();
+    const testsByCategory = await repoRepository.getTestsByCategory();
 
     const teachers = teachersData.map((teacher) => teacher.name);
     const disciplines = disciplinesData.map((discipline) => discipline.name);
 
-    return { teachers, disciplines, dataByTerm, dataByTeacher };
+    return { dataByTeacher };
 }
 
 export default {

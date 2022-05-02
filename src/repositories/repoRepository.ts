@@ -38,6 +38,14 @@ async function getDataByTeacher() {
     });
 }
 
+async function getTestsByCategory() {
+    return prisma.categories.findMany({
+        include: {
+            tests: true,
+        },
+    });
+}
+
 async function getTeachers() {
     return prisma.teachers.findMany({});
 }
@@ -51,4 +59,5 @@ export default {
     getDataByTeacher,
     getTeachers,
     getDisciplines,
+    getTestsByCategory,
 };
