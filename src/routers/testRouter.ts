@@ -13,9 +13,5 @@ testRouter.post(
     validateSchemaMiddleware(testSchema),
     testController.insert
 );
-testRouter.put(
-    '/tests/:id',
-    ensureAuthenticatedMiddleware,
-    testController.updateViews
-);
+testRouter.put('/tests/:id', testController.updateViews);
 export default testRouter;
