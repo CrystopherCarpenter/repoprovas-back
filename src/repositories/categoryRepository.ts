@@ -1,9 +1,9 @@
-import { prisma } from "../database.js";
+import { prisma } from '../database.js';
 
 async function findMany() {
-  return prisma.category.findMany();
+    return prisma.category.findMany();
 }
 
 export default {
-  findMany,
+    findMany,
 };
