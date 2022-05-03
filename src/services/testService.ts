@@ -25,7 +25,14 @@ async function insert(testData: TestData) {
     return;
 }
 
+async function updateViews(testId: number) {
+    await testRepository.updateViews(testId);
+
+    return;
+}
+
 export default {
     find,
     insert,
+    updateViews,
 };
